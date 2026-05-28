@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { accent, card, cardHover, muted, shadow, radius, font, transition, border } from "../data/theme";
 import { days } from "../data/exercises";
+import WeightChart from "./WeightChart";
 
 export default function DailyTracker({
   activeDay,
@@ -403,6 +404,9 @@ export default function DailyTracker({
               <span>Current: <strong style={{ color: "#fff" }}>{currentWeight} kg</strong></span>
               <span>Total Lost: <strong style={{ color: "#2ecc71" }}>-{totalWeightLost} kg</strong></span>
             </div>
+
+            {/* Weight Trend Chart */}
+            {weightLog.length >= 2 && <div style={{ marginBottom: 14, marginTop: 4 }}><WeightChart weightLog={weightLog} /></div>}
 
             {/* Log List */}
             <div style={{

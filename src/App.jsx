@@ -6,6 +6,8 @@ import MealTab from "./components/MealTab";
 import DailyTracker from "./components/DailyTracker";
 import HiitTimer from "./components/HiitTimer";
 import TipsTab from "./components/TipsTab";
+import MacroTracker from "./components/MacroTracker";
+import StreakAchievements from "./components/StreakAchievements";
 import { dark } from "./data/theme";
 
 export default function FitnessPlan() {
@@ -104,6 +106,21 @@ export default function FitnessPlan() {
           </div>
         )}
         
+        {tab === "macros" && (
+          <div key="macros" style={{ animation: "fadeInUp 0.35s ease" }}>
+            <MacroTracker
+              calorieGoal={calorieGoal}
+              proteinGoal={proteinGoal}
+            />
+          </div>
+        )}
+
+        {tab === "streaks" && (
+          <div key="streaks" style={{ animation: "fadeInUp 0.35s ease" }}>
+            <StreakAchievements />
+          </div>
+        )}
+
         {tab === "tips" && (
           <div key="tips" style={{ animation: "fadeInUp 0.35s ease" }}>
             <TipsTab />

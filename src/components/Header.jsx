@@ -5,7 +5,9 @@ const tabs = [
   { id: "overview", label: "Overview", icon: "📊" },
   { id: "workout", label: "Workout", icon: "🏋️" },
   { id: "meal", label: "Meal Plan", icon: "🍗" },
+  { id: "macros", label: "Macros", icon: "🔥" },
   { id: "tracker", label: "Daily Tracker", icon: "💧" },
+  { id: "streaks", label: "Streaks", icon: "🏆" },
   { id: "timer", label: "HIIT Timer", icon: "⏱️" },
   { id: "tips", label: "Tips", icon: "💡" },
 ];
